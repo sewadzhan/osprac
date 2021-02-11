@@ -13,7 +13,7 @@ int main(int argc, char *argv[], char *envp[])
 	} else if (pid == 0) {
 	   	printf("This is child process.\n");
 		printf("This program launchs 03-3.c from child process");
-		execl("03-3.c", "Hello", "parent");
+		execl("/bin/cat", "/bin/cat", "03-3.c", 0);
 	} else {
 	    	printf("This is parent process.\n");
 	}
