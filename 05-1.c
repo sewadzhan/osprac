@@ -13,20 +13,22 @@ int main()
     (void)umask(0);
 
     if ((fd = open("myfile", O_RDONLY)) < 0) {
-        printf("Can not open the file \'myfile\'\n");
+        printf("Can\'t open the file\n");
         exit(-1);
     }
 
     char string[14];
+
     size = read(fd, string, 14);
+
     if (size != 14) {
-        printf("Can not read all strings of file \'myfile\'\n");
+        printf("Can\'t read all string\n");
         exit(-1);
     }
 
     printf("%s\n", string);
 
     if (close(fd) < 0)
-        printf("Can not close the file \'myfile\'\n");
+        printf("Can\'t close the file\n");
     return 0;
 }
